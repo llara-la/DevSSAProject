@@ -7,3 +7,12 @@ packages:
   gitUrl: https://github.com/llara-la
   gitUsername: llara-la
   gitBranch: main
+services:
+- serviceName: project.devssa.integrations:writeLog
+  packages:
+  - name: DevSSAProject
+    version: "1.0"
+- serviceName: pub.flow:debugLog
+  packages:
+  - name: WmPublic
+    version: 11.1.0.0.2028
