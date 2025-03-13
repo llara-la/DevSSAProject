@@ -184,7 +184,7 @@
   <value name="retry_interval">0</value>
   <record name="node_hints" javaclass="com.wm.util.Values">
     <value name="lastModifiedBy">leonel.lara@ibm.com</value>
-    <value name="lastModifiedDate">1741283184733</value>
+    <value name="lastModifiedDate">1741870197573</value>
     <value name="displayName">writeLog</value>
     <value name="description"></value>
     <record name="stepNodeHints" javaclass="com.wm.util.Values">
@@ -206,6 +206,16 @@
         <array name="lookupTransformer" type="object" depth="1" javaclass="java.lang.Object">
         </array>
         <value name="nodePathForDebug">0</value>
+      </record>
+      <record name="/0/0" javaclass="com.wm.util.Values">
+        <value name="itemType">SERVICES</value>
+        <Boolean name="serviceReferenceResolved">true</Boolean>
+        <record name="serviceName" javaclass="com.wm.util.Values">
+          <value name="displayName">concat</value>
+          <value name="serviceName">pub.string:concat</value>
+          <value name="transformerSupport">true</value>
+        </record>
+        <value name="nodePathForDebug">0.0</value>
       </record>
       <record name="/1" javaclass="com.wm.util.Values">
         <value name="itemType">CONTROLS</value>
@@ -234,6 +244,8 @@
           <value name="serviceName">pub.string:concat</value>
           <value name="transformerSupport">true</value>
         </record>
+        <array name="mapSet" type="object" depth="1" javaclass="java.lang.Object">
+        </array>
       </record>
       <null name="/1/1"/>
       <record name="/2" javaclass="com.wm.util.Values">
@@ -256,19 +268,14 @@
         <null name="mapSet"/>
         <null name="outputMapSet"/>
         <Boolean name="serviceReferenceResolved">true</Boolean>
-        <value name="nodePathForDebug">2</value>
         <Boolean name="xmlMapsetSupported">true</Boolean>
+        <value name="nodePathForDebug">2</value>
       </record>
       <record name="/3" javaclass="com.wm.util.Values">
         <value name="itemType">ALL</value>
         <value name="name">NEW</value>
         <value name="nodePathForDebug">3</value>
       </record>
-    </record>
-    <record name="edgeServer" javaclass="com.wm.util.Values">
-      <value name="group">Default</value>
-      <value name="id">default</value>
-      <value name="name">Cloud Execution</value>
     </record>
   </record>
   <value name="svc_in_validator_options">none</value>
