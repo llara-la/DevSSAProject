@@ -8,11 +8,7 @@ packages:
   gitUsername: llara-la
   gitBranch: main
 services:
-- serviceName: project.devssa.integrations:writeLog
+- serviceName: project.devssa.integrations:DbGetDatos
   packages:
   - name: DevSSAProject
     version: "1.0"
-- serviceName: pub.flow:debugLog
-  packages:
-  - name: WmPublic
-    version: 11.1.0.0.2028
