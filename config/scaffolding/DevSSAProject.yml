@@ -15,10 +15,6 @@ services:
   packages:
   - name: DevSSAProject
     version: "1.0"
-- serviceName: project.devssa.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.operations.actions:DBgetClientes
-  packages:
-  - name: DevSSAProject
-    version: "1.0"
 - serviceName: project.devssa.integrations:writeLog
   packages:
   - name: DevSSAProject
