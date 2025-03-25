@@ -458,6 +458,12 @@
 </MAPCOPY>
 
 <MAPSET NAME="Setter" OVERWRITE="true" VARIABLES="false" GLOBALVARIABLES="false" FIELD="/inString2;1;0">
+  <DATA ENCODING="XMLValues" I18N="true">
+
+<Values version="2.0">
+  <value name="xml"></value>
+</Values>
+</DATA>
 </MAPSET>
 </MAP>
 
@@ -697,21 +703,9 @@
 </MAPCOPY>
 
 <MAPSET NAME="Setter" OVERWRITE="true" VARIABLES="false" GLOBALVARIABLES="false" FIELD="/function;1;0">
-  <DATA ENCODING="XMLValues" I18N="true">
-
-<Values version="2.0">
-  <value name="xml">WriteLog</value>
-</Values>
-</DATA>
 </MAPSET>
 
 <MAPSET NAME="Setter" OVERWRITE="true" VARIABLES="false" GLOBALVARIABLES="false" FIELD="/level;1;0">
-  <DATA ENCODING="XMLValues" I18N="true">
-
-<Values version="2.0">
-  <value name="xml">Info</value>
-</Values>
-</DATA>
 </MAPSET>
 </MAP>
 
@@ -1010,6 +1004,33 @@
 </MAPSOURCE>
 
   <!-- nodes -->
+
+<MAPINVOKE NAME="Date" SERVICE="pub.date:getCurrentDateString" VALIDATE-IN="$none" VALIDATE-OUT="$none" INVOKE-ORDER="0">
+
+  <!-- nodes -->
+
+<MAP MODE="INVOKEINPUT">
+
+  <!-- nodes -->
+
+<MAPSET NAME="Setter" OVERWRITE="true" VARIABLES="false" GLOBALVARIABLES="false" FIELD="/pattern;1;0">
+  <DATA ENCODING="XMLValues" I18N="true">
+
+<Values version="2.0">
+  <value name="xml">dd/MM/yyyy</value>
+</Values>
+</DATA>
+</MAPSET>
+</MAP>
+
+<MAP MODE="INVOKEOUTPUT">
+
+  <!-- nodes -->
+
+<MAPCOPY FROM="/value;1;0" TO="/UserId;1;0">
+</MAPCOPY>
+</MAP>
+</MAPINVOKE>
 
 <MAPCOPY FROM="/DatosTransaccion;2;0/TokenID;1;0" TO="/ResultLogTransacction;1;0">
 </MAPCOPY>
