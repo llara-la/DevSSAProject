@@ -11,10 +11,6 @@ packages:
   wpmServer: https://packages.webmethods.io
   wpmRegistry: licensed
 services:
-- serviceName: project.devssa.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections:Database_1
-  packages:
-  - name: DevSSAProject
-    version: "1.0"
 - serviceName: project.devssa.integrations:writeLog
   packages:
   - name: DevSSAProject
