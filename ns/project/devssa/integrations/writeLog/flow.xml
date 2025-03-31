@@ -458,12 +458,6 @@
 </MAPCOPY>
 
 <MAPSET NAME="Setter" OVERWRITE="true" VARIABLES="false" GLOBALVARIABLES="false" FIELD="/inString2;1;0">
-  <DATA ENCODING="XMLValues" I18N="true">
-
-<Values version="2.0">
-  <value name="xml"></value>
-</Values>
-</DATA>
 </MAPSET>
 </MAP>
 
@@ -477,12 +471,6 @@
 </MAPINVOKE>
 
 <MAPSET NAME="Setter" OVERWRITE="true" VARIABLES="false" GLOBALVARIABLES="false" FIELD="/UserId;1;0">
-  <DATA ENCODING="XMLValues" I18N="true">
-
-<Values version="2.0">
-  <value name="xml">prueba</value>
-</Values>
-</DATA>
 </MAPSET>
 </MAP>
 
@@ -809,14 +797,8 @@
         <value name="is_global">false</value>
       </record>
       <record javaclass="com.wm.util.Values">
-        <value name="node_type">field</value>
+        <value name="node_type">unknown</value>
         <value name="node_subtype">unknown</value>
-        <value name="node_comment"></value>
-        <record name="node_hints" javaclass="com.wm.util.Values">
-          <value name="field_largerEditor">false</value>
-          <value name="field_password">false</value>
-          <value name="field_usereditable">false</value>
-        </record>
         <value name="is_public">false</value>
         <value name="field_name">ResultLogTransacction</value>
         <value name="field_type">string</value>
@@ -1017,22 +999,37 @@
   <DATA ENCODING="XMLValues" I18N="true">
 
 <Values version="2.0">
-  <value name="xml">dd/MM/yyyy</value>
+  <value name="xml">dd/MM/yyyy HH:mm</value>
 </Values>
 </DATA>
 </MAPSET>
 </MAP>
 
 <MAP MODE="INVOKEOUTPUT">
+</MAP>
+</MAPINVOKE>
+
+<MAPINVOKE NAME="String" SERVICE="pub.string:concat" VALIDATE-IN="$none" VALIDATE-OUT="$none" INVOKE-ORDER="0">
 
   <!-- nodes -->
 
-<MAPCOPY FROM="/value;1;0" TO="/UserId;1;0">
+<MAP MODE="INVOKEINPUT">
+
+  <!-- nodes -->
+
+<MAPCOPY FROM="/DatosTransaccion;2;0/TokenID;1;0" TO="/inString1;1;0">
 </MAPCOPY>
+</MAP>
+
+<MAP MODE="INVOKEOUTPUT">
 </MAP>
 </MAPINVOKE>
 
 <MAPCOPY FROM="/DatosTransaccion;2;0/TokenID;1;0" TO="/ResultLogTransacction;1;0">
 </MAPCOPY>
+</MAP>
+
+<MAP TIMEOUT="" MODE="STANDALONE">
+  <COMMENT></COMMENT>
 </MAP>
 </FLOW>
